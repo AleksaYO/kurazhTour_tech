@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_container_mobile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+
+.logo_wrapper {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #ff006a;
+  border-radius: 50%;
+  align-items: end;
+  justify-content: center;
+}
+
+.hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  gap: 3px;
+  background-color: #ffbb00;
+  border: none;
+  border-radius: 50%;
+
+  z-index: 9999999;
+}
+
+.hamburger.is-active > .line:first-child {
+  transform: translateY(3px) rotate(45deg);
+  transition: all 100ms linear;
+}
+.hamburger.is-active > .line:last-child {
+  transform: translateY(-3px) rotate(-45deg);
+  transition: all 100ms linear;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: #ff006a;
+  transition: all 100ms linear;
+}
+
+.hamburger_menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 70%;
+  height: 100vh;
+  background-color: transparent;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 100ms linear;
+}
+
+.hamburger_menu.is-active {
+  background-color: #ffbb00;
+  pointer-events: unset;
+  visibility: unset;
+  opacity: 1;
+  transition: all 100ms linear;
+}
+.hamburger_list {
+  list-style: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 30px;
+}
+
+.hamburger_subMenu {
+  position: absolute;
+  visibility: none;
+  opacity: 0;
+  pointer-events: none;
+  list-style: none;
+}
+
+.hamburger_item > a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.hamburger_item.is-active > .hamburger_subMenu {
+  position: relative;
+  visibility: unset;
+  opacity: 1;
+  pointer-events: unset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+  padding-left: 20px;
+
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.hamburger_subMenu > li > a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hamburger_contacts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 30px;
+}
+
+.hamburger_contacts-list > li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.hamburger_contacts-list > li > a {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
