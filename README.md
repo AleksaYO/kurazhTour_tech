@@ -1,0 +1,1 @@
+# kurazhTour_tech
