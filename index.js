@@ -1,10 +1,22 @@
 const hamburger = document.querySelector(".hamburger");
 const hamburgerMenu = document.querySelector(".hamburger_menu");
 const hamburgerList = document.querySelector(".hamburger_list");
+const tour = document.querySelector(".tour");
+const tourSubList = document.querySelector(".navigation_sublist-tour");
+const service = document.querySelector(".service");
+const servSubList = document.querySelector(".navigation_sublist-service");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("is-active");
   hamburgerMenu.classList.toggle("is-active");
+});
+
+service.addEventListener("click", () => {
+  servSubList.classList.toggle("is-active");
+});
+
+tour.addEventListener("click", () => {
+  tourSubList.classList.toggle("is-active");
 });
 
 hamburgerMenu.addEventListener("click", ({ target }) => {
